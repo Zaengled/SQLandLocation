@@ -7,21 +7,22 @@ import android.provider.BaseColumns;
  */
 
 public final class TestContract {
+
     private TestContract(){}
 
-    public static class TestEntry implements BaseColumns {
-        public static final String TABLE_NAME = "entry";
-        public static final String COLUMN_NAME_TITLE = "title";
-        public static final String COLUMN_NAME_SUBTITLE = "subtitle";
-    }
-    private static final String SQL_CREATE_ENTRIES =
-            "CREATE TABLE " + TestEntry.TABLE_NAME + " (" +
-                    TestEntry._ID + " INTEGER PRIMARY KEY," +
-                    TestEntry.COLUMN_NAME_TITLE + " TEXT," +
-                    TestEntry.COLUMN_NAME_SUBTITLE + " TEXT)";
+    public static class Location implements BaseColumns {
+        public static final String TABLE_NAME = "locationTable";
+        public static final String COLUMN_TEXT = "text";
+        public static final String COLUMN_LAT = "latitude";
+        public static final String COLUMN_LON = "longitude";
 
-    private static final String SQL_DELETE_ENTRIES =
-            "DROP TABLE IF EXISTS " + TestEntry.TABLE_NAME;
+        public static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS " +
+                TABLE_NAME + " (" + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMN_TEXT + " TEXT, " + COLUMN_LAT + " INTEGER, " + COLUMN_LON +
+                " INTEGER" + ")";
+    }
+
+
 }
 
 

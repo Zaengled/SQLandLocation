@@ -3,4 +3,6 @@
     <string name="sql_button">Submit</string>
     <string name="sql_form">Enter String:</string>
     <string name="output_box">output here</string>
+    <string name="text_label">Text Input:</string>
+    <string name="search_button">Search</string>
 </resources>
